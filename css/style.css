@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 150vh;
+  min-height: 100vh;
   background-color: #e5eff5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,21 +20,17 @@ body {
   padding: 0;
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    height: 100vh;
-  }
-}
-
 .container {
   font-size: 14px;
   font-family: 'Karla', sans-serif;
   border-radius: 5px;
   width: 40%;
-  height: 80%;
+  height: 70%;
   padding: 0;
   display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 1.2fr 1fr 1fr;
+      grid-template-rows: 1.2fr 1fr 1fr;
   -webkit-box-shadow: 0 0 20px #b6d0e2;
           box-shadow: 0 0 20px #b6d0e2;
 }
@@ -152,7 +148,7 @@ div {
   position: absolute;
   bottom: 0;
   right: 20px;
-  font-size: 11px;
+  font-size: 0.5em;
   text-align: center;
 }
 

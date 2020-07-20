@@ -14,7 +14,7 @@ $dark-gray: hsl(204, 43%, 80%);
 }
 
 body {
-    height: 150vh;
+    min-height: 100vh;
     background-color: $gray;
     
     display: flex;
@@ -23,10 +23,6 @@ body {
 
     margin: 0;
     padding: 0;
-
-    @media only screen and (min-width: 768px) {
-        height: 100vh;
-    }
 }
 
 .container {
@@ -35,11 +31,12 @@ body {
 
     border-radius: 5px;
     width: 40%;
-    height: 80%;
+    height: 70%;
 
     padding: 0;
 
     display    : grid;
+    grid-template-rows   : 1.2fr 1fr 1fr;
 
     box-shadow: 0 0 20px rgba($color: $dark-gray, $alpha: 1.0);
 
@@ -144,7 +141,7 @@ div {
         position  : absolute;
         bottom    : 0;
         right     : 20px;
-        font-size : 11px;
+        font-size : 0.5em;
         text-align: center;
     }
 
