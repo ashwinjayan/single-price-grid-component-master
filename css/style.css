@@ -6,12 +6,27 @@ body {
   padding: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1.2fr;
+        grid-template-rows: 1fr 1.2fr;
+        grid-template-areas: "header header" "price info";
+  }
 }
 
 div {
-  padding: 1em;
+  padding: 1.5em;
+}
+
+@media only screen and (min-width: 768px) {
+  div {
+    padding: 3em;
+  }
 }
 
 .one {
@@ -31,13 +46,36 @@ div {
   line-height: 1.5em;
 }
 
+@media only screen and (min-width: 768px) {
+  .one {
+    grid-area: header;
+  }
+}
+
 .two {
   background-color: #2ab2af;
   color: white;
 }
 
-.two h4 > span {
+.two p > span {
   font-size: 2em;
+  font-weight: 700;
+  margin-right: 0.5em;
+  color: white;
+}
+
+.two p:first-of-type {
+  color: #b6d0e2;
+}
+
+.two p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #e5eff5;
 }
 
 .two button {
@@ -52,25 +90,44 @@ div {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.three,
-footer {
-  background-color: #61d1cf;
-  color: white;
+@media only screen and (min-width: 768px) {
+  .two {
+    grid-area: price;
+  }
 }
 
-.three ul,
-footer ul {
+.three {
+  background-color: #61d1cf;
+  color: white;
+  position: relative;
+}
+
+.three ul {
+  font-size: 0.9em;
   padding-left: 0;
   list-style: none;
   color: #e5eff5;
 }
 
-.attribution {
+.three p {
+  padding: 0;
+}
+
+.three .attribution {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
   font-size: 11px;
   text-align: center;
 }
 
-.attribution a {
-  color: #3e52a3;
+.three .attribution a {
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .three {
+    grid-area: info;
+  }
 }
 /*# sourceMappingURL=style.css.map */

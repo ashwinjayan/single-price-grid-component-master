@@ -15,11 +15,22 @@ body {
     margin            : 0;
     padding           : 0;
     display           : grid;
-    grid-template-rows: 1fr 1fr 1fr;
+
+    @media only screen and (min-width: 768px) {
+        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1.2fr;
+        grid-template-areas: "header header"
+                            "price info";
+    }
 }
 
 div {
-    padding: 1em;
+    padding: 1.5em;
+
+    @media only screen and (min-width: 768px) {
+        padding: 3em;
+    }
 }
 
 .one {
@@ -37,15 +48,33 @@ div {
         color: $dark-gray;
         line-height: 1.5em;
     }
+
+    @media only screen and (min-width: 768px) {
+        grid-area: header;
+    }
 }
 
 .two {
     background-color: $cyan;
     color           : white;
 
-    h4>span {
+    p>span {
         font-size: 2em;
+        font-weight: 700;
+        margin-right: 0.5em;
+        color: white;
     }
+
+    p:first-of-type {
+        color: $dark-gray;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        color: $gray;
+    }
+    
 
     button {
         color: white;
@@ -58,26 +87,41 @@ div {
 
         box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
     }
+
+    @media only screen and (min-width: 768px) {
+        grid-area: price;
+    }
 }
 
-.three,
-footer {
+.three {
     background-color: $light-cyan;
     color           : white;
+    position: relative;
 
     ul {
+        font-size: 0.9em;
         padding-left: 0;
         list-style  : none;
         color       : $gray;
     }
-}
 
+    p {
+        padding: 0;
+    }
 
-.attribution {
-    font-size : 11px;
-    text-align: center;
-}
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        font-size : 11px;
+        text-align: center;
+    }
+    
+    .attribution a {
+        color: white;
+    }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+    @media only screen and (min-width: 768px) {
+        grid-area: info;
+    }
 }
