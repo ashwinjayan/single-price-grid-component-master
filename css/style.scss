@@ -14,30 +14,39 @@ $dark-gray: hsl(204, 43%, 80%);
 }
 
 body {
-    height: 100vh;
+    height: 150vh;
     background-color: $gray;
     
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.container {
-    font-size  : 16px;
-    font-family: 'Karla', sans-serif;
     margin: 0;
     padding: 0;
 
-    width: 70%;
-    height: 90%;
+    @media only screen and (min-width: 768px) {
+        height: 100vh;
+    }
+}
 
-    border-radius: 10px;
+.container {
+    font-size  : 14px;
+    font-family: 'Karla', sans-serif;
+
+    border-radius: 5px;
+    width: 40%;
+    height: 80%;
+
+    padding: 0;
 
     display    : grid;
 
     box-shadow: 0 0 20px rgba($color: $dark-gray, $alpha: 1.0);
 
     @media only screen and (min-width: 768px) {
+        width: 60%;
+        height: 80%;
+        font-size  : 16px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows   : 1fr 1.2fr;
         grid-template-areas  : "header header"
@@ -46,7 +55,7 @@ body {
 }
 
 div {
-    padding: 1.5em;
+    padding: 1em;
     overflow: hidden;
 
     @media only screen and (min-width: 768px) {
