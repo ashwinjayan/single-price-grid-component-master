@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 body {
-  font-size: 16px;
+  font-size: calc(16px + (26 - 16) * ((100vw - 500px) / (5000 - 500)));
   font-family: 'Karla', sans-serif;
   margin: 0;
   padding: 0;

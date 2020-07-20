@@ -10,18 +10,18 @@ $gray     : hsl(204, 43%, 93%);
 $dark-gray: hsl(204, 43%, 80%);
 
 body {
-    font-size         : 16px;
-    font-family       : 'Karla', sans-serif;
-    margin            : 0;
-    padding           : 0;
-    display           : grid;
+    font-size  : calc(16px + (26 - 16) * ((100vw - 500px) / (5000 - 500)));
+    font-family: 'Karla', sans-serif;
+    margin     : 0;
+    padding    : 0;
+    display    : grid;
 
     @media only screen and (min-width: 768px) {
-        height: 100vh;
+        height               : 100vh;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1.2fr;
-        grid-template-areas: "header header"
-                            "price info";
+        grid-template-rows   : 1fr 1.2fr;
+        grid-template-areas  : "header header"
+            "price info";
     }
 }
 
@@ -45,7 +45,7 @@ div {
     }
 
     p {
-        color: $dark-gray;
+        color      : $dark-gray;
         line-height: 1.5em;
     }
 
@@ -59,10 +59,10 @@ div {
     color           : white;
 
     p>span {
-        font-size: 2em;
-        font-weight: 700;
+        font-size   : 2em;
+        font-weight : 700;
         margin-right: 0.5em;
-        color: white;
+        color       : white;
     }
 
     p:first-of-type {
@@ -70,20 +70,20 @@ div {
     }
 
     p {
-        display: flex;
+        display    : flex;
         align-items: center;
-        color: $gray;
+        color      : $gray;
     }
-    
+
 
     button {
-        color: white;
-        font-weight: 700;
+        color           : white;
+        font-weight     : 700;
         background-color: $yellow;
-        width: 100%;
-        height: 3.5em;
-        border: none;
-        border-radius: 5px;
+        width           : 100%;
+        height          : 3.5em;
+        border          : none;
+        border-radius   : 5px;
 
         box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
     }
@@ -96,10 +96,10 @@ div {
 .three {
     background-color: $light-cyan;
     color           : white;
-    position: relative;
+    position        : relative;
 
     ul {
-        font-size: 0.9em;
+        font-size   : 0.9em;
         padding-left: 0;
         list-style  : none;
         color       : $gray;
@@ -110,13 +110,13 @@ div {
     }
 
     .attribution {
-        position: absolute;
-        bottom: 0;
-        right: 20px;
+        position  : absolute;
+        bottom    : 0;
+        right     : 20px;
         font-size : 11px;
         text-align: center;
     }
-    
+
     .attribution a {
         color: white;
     }
